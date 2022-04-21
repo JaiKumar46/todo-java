@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik Wet Paint', cursive;
+}
+body{
+  background-image: linear-gradient(to right top, #ff8066, #f8738f, #db74b3, #ac7eca, #7086cf, #6286ce, #5385cd, #4185cc, #6b7fd2, #9376d0, #b76ac5, #d65db1);
+
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+}
+article{
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  left: 22rem;
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#todos{
+    color: white;
+    padding: 20px;
+    width: 600px;
+    margin: 0 auto;
+    height: auto;
+    
+}
+#todos > .heading{
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    top: 2rem;
+    
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+#todos > .heading > h1{
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 5rem;
+}
+
+
+#todos > .todo-input-container{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+    top: 5rem;
+    
+}
+#todos > .todo-input-container > .todo_input{
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 20px;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: black;
+    border-radius:10px ;
+}
+#todos > .todo-input-container > .todo_input::placeholder{
+  color:#F2ECFF;
+  padding-left: 3rem;
+}
+#todos > .todo-input-container > .add-item{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    /* background-color: rgb(236, 44, 44); */
+    background-image: linear-gradient(to right, #b9092f, #c73054, #cf4d78, #d36898, #d482b4);
+    line-height: 40px;
+    color: white;
+    cursor: pointer;
+    transition-duration: 2s;
+
+    
+}
+#todos > .todo-input-container > .add-item:hover{
+  transform: scale(1.1);
+}
+#todos > .todo-input-container > .add-item:nth-child(2){
+    right: 40px;
+    transition: 2s;
+    background-image: linear-gradient(to right, #87a0e7, #00c0ff, #00dae8, #00ea94, #a8eb12);
+    /* background-image: linear-gradient(to left top, #87a0e7, #00c0ff, #00dae8, #00ea94, #a8eb12); */
+}
+#todos > .todo-input-container > .add-item:nth-child(2):hover{
+  transform: scale(1.1);
+}
+#todos > .todo-list-container{
+    list-style: none;
+    margin: 10px 0 0;
+}
+#todos > .todo-list-container .todo-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    top: 5rem;
+    left: 0.2rem;
+    
+   
+}
+#todos > .todo-list-container .todo-list .todo-item{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+   
+}
+#todos > .todo-list-container .todo-list .button{
+    position: absolute;
+    right: 0;
+}
+#todos > .todo-list-container .todo-list .button button{
+    width: 40px;
+    height: 50px;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+#todos > .todo-list-container .todo-list .button .completed{
+    /* background-color: #3ec282; */
+    transition-duration: 1s;
+    background-image: linear-gradient(to right, #09b927, #00c466, #00cd96, #00d5bd, #1fdada);
+}
+#todos > .todo-list-container .todo-list .button .completed:hover{
+  transform: scale(1.3);
+  
+ 
+}
+#todos > .todo-list-container .todo-list .button .trash{
+    /* background-color: #e72727; */
+    transition-duration: 1s;
+    background-image: linear-gradient(to right, #b9092f, #c73054, #cf4d78, #d36898, #d482b4);
+}
+#todos > .todo-list-container .todo-list .button .trash:hover{
+  transform: scale(1.3);
+}
+#todos > .todo-list-container .todo-list .button button i{
+    pointer-events: none;
+}
+.fall{
+    opacity: 0 !important;
+    transform: translateY(30px);
+    transition: .5s;
+}
+.line_through{
+    text-decoration: line-through;
+    opacity: 0.7;
+    transition: .3s;
+}
+
+.editBtn{
+    /* background-color: rgb(86, 62, 193); */
+    transition-duration: 1s;
+    background-image: linear-gradient(to right, #0937b9, #c30097, #ff3d5e, #ff922b, #dcdb3c);
+}
+.editBtn:hover{
+  transform: scale(1.3);
+}
+
+@media screen and (max-width: 600px){
+    #todos{
+        width: 100%;
+    }
+}
+
+button{
+  border-radius: 2px;
+  transition-duration:10s ;
+}
+button:hover{
+  transform: scale(1.3);
+  transform-style: preserve-3d;
+}
